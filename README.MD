@@ -1,4 +1,4 @@
-# `Fullwidth Halfwidth Convertor v.1.0.0`
+# `Fullwidth Halfwidth Convertor v.1.0.2`
 
 ## Installation
 Using npm:
