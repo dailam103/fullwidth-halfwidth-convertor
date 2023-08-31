@@ -1,0 +1,17 @@
+{
+  "name": "fullwidth-halfwidth-convertor",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": "true",
+  "description": "fullwidth halfwidth convertor",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": ["fullwidth", "halfwidth", "convertor", "converter", "fullwidth halfwidth converter", "japanese", "japanese converter"],
+  "author": "lamnqd@nal.vn",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  }
+}
