@@ -1,4 +1,6 @@
-# `Fullwidth Halfwidth Convertor v.1.0.2`
+# `Fullwidth Halfwidth Convertor v1.0.3`
+
+[![Coverage Status][coverage-result-link]][coverage-link]
 
 ## Installation
 Using npm:
@@ -26,3 +28,6 @@ console.log(fullToHalf('フール'));
 
 console.log(halfToFull('ﾌｰﾙ'));
 ```
+
+[coverage-result-link]: https://coveralls.io/repos/github/dailam103/fullwidth-halfwidth-convertor/badge.svg
+[coverage-link]: https://coveralls.io/github/dailam103/fullwidth-halfwidth-convertor

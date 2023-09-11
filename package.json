@@ -1,16 +1,33 @@
 {
   "name": "fullwidth-halfwidth-convertor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "fullwidth halfwidth convertor",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "keywords": ["fullwidth", "halfwidth", "convertor", "converter", "fullwidth halfwidth converter", "japanese", "japanese converter"],
+  "keywords": [
+    "fullwidth",
+    "halfwidth",
+    "convertor",
+    "converter",
+    "fullwidth halfwidth converter",
+    "japanese",
+    "japanese converter"
+  ],
   "author": "dailam103@gmail.com",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "test": "source .env && jest && coveralls < coverage/lcov.info"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "babel-jest": "^29.6.4",
+    "coveralls": "^3.1.1",
+    "jest": "^29.6.4",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1"
   }
 }
