@@ -1,2 +1,2 @@
 
-export { fullToHalf, halfToFull } from './converter';
+export { fullToHalf, halfToFull, isFullwidthCodePoint } from './converter';

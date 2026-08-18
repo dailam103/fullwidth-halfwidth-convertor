@@ -12,21 +12,25 @@ $ npm i --save fullwidth-halfwidth-convertor
 ### In Node.js
 `Commonjs`
 ```JS
-const { halfToFull, fullToHalf } = require('fullwidth-halfwidth-convertor');
+const { halfToFull, fullToHalf, isFullwidthCodePoint } = require('fullwidth-halfwidth-convertor');
 
 console.log(fullToHalf('フール'));
 
 console.log(halfToFull('ﾌｰﾙ'));
+
+console.log(isFullwidthCodePoint('フ'.codePointAt(0))); // true
 
 ```
 
 `Modulejs or Typescript`
 ```TS
-import { halfToFull, fullToHalf } from 'fullwidth-halfwidth-convertor';
+import { halfToFull, fullToHalf, isFullwidthCodePoint } from 'fullwidth-halfwidth-convertor';
 
 console.log(fullToHalf('フール'));
 
 console.log(halfToFull('ﾌｰﾙ'));
+
+console.log(isFullwidthCodePoint('フ'.codePointAt(0)!)); // true
 ```
 
 [coverage-result-link]: https://coveralls.io/repos/github/dailam103/fullwidth-halfwidth-convertor/badge.svg

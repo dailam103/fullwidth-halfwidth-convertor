@@ -49,3 +49,38 @@ export const halfToFull = (halfWidthString: string): string => {
   }).join('');
 }
 
+/**
+ * Checks whether a Unicode code point is a fullwidth (or wide) character,
+ * as defined by the Unicode East Asian Width property (W and F categories).
+ * @param {number} codePoint
+ * @returns {boolean}
+ */
+export const isFullwidthCodePoint = (codePoint: number): boolean => {
+  if (Number.isNaN(codePoint)) {
+    return false;
+  }
+
+  return (
+    codePoint >= 0x1100 && (
+      codePoint <= 0x115F || // Hangul Jamo
+      codePoint === 0x2329 || // LEFT-POINTING ANGLE BRACKET
+      codePoint === 0x232A || // RIGHT-POINTING ANGLE BRACKET
+      (codePoint >= 0x2E80 && codePoint <= 0x3247 && codePoint !== 0x303F) ||
+      (codePoint >= 0x3250 && codePoint <= 0x4DBF) ||
+      (codePoint >= 0x4E00 && codePoint <= 0xA4C6) ||
+      (codePoint >= 0xA960 && codePoint <= 0xA97C) ||
+      (codePoint >= 0xAC00 && codePoint <= 0xD7A3) ||
+      (codePoint >= 0xF900 && codePoint <= 0xFAFF) ||
+      (codePoint >= 0xFE10 && codePoint <= 0xFE19) ||
+      (codePoint >= 0xFE30 && codePoint <= 0xFE6B) ||
+      (codePoint >= 0xFF01 && codePoint <= 0xFF60) ||
+      (codePoint >= 0xFFE0 && codePoint <= 0xFFE6) ||
+      (codePoint >= 0x1B000 && codePoint <= 0x1B001) ||
+      (codePoint >= 0x1F200 && codePoint <= 0x1F251) ||
+      (codePoint >= 0x1F300 && codePoint <= 0x1F64F) ||
+      (codePoint >= 0x1F900 && codePoint <= 0x1F9FF) ||
+      (codePoint >= 0x20000 && codePoint <= 0x3FFFD)
+    )
+  );
+}
+
