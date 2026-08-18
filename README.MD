@@ -1,4 +1,4 @@
-# `Fullwidth Halfwidth Convertor v1.0.3`
+# `Fullwidth Halfwidth Convertor v1.1.2`
 
 [![Coverage Status][coverage-result-link]][coverage-link]
 
